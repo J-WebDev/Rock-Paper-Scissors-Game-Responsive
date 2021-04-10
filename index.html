@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>ითამაშე ჯეირანი</title>
+	<!-- add icon link -->
+	<link rel = "icon" href ="https://img.icons8.com/doodle/48/000000/super-mario.png" type = "image/x-icon"> 
+</head>
+<body>
+	<main class="disp-flex"> 
+		<div class="wrapper">
+			<!-- Title and logo section -->
+			<div class="title-wrapper">
+				<h1>ჯეირანი</h1>
+				<div class="logo-wrapper disp-flex">
+					<i class="far fa-hand-rock fa-2x"></i>
+					<i class="far fa-hand-paper fa-2x"></i>
+					<i class="far fa-hand-scissors fa-2x"></i>
+				</div>
+			</div>
+			<div class="hr"></div>
+			<!-- main section -->
+			<div>
+				<h2 id="user-name">My Choice</h2>
+				<div class="btn-wrapper">
+					
+					<button class="my-rock" onmousedown="rockColor()" onmouseup="whoIsWinner()"><i class="fas fa-hand-rock fa-5x"></i></button>
+
+					<button class="my-paper" onmousedown="paperColor()" onmouseup="whoIsWinner()"><i class="fas fa-hand-paper fa-5x"></i></button>
+
+					<button class="my-scissors" onmousedown="scissorsColor()" onmouseup="whoIsWinner()"><i class="fas fa-hand-scissors fa-5x"></i></button>
+				</div>
+			</div>
+			<div>
+				<h2>კომპიუტერი</h2>
+				<div class="btn-wrapper">
+					<button class="pc-rock"><i class="fas fa-hand-rock fa-5x"></i></button>
+
+					<button class="pc-paper"><i class="fas fa-hand-paper fa-5x"></i></button>
+
+					<button class="pc-scissors"><i class="fas fa-hand-scissors fa-5x"></i></button>
+				</div>
+			</div>
+
+			<!-- bottom section - scores -->
+			<div class="score">
+				<div class="my-score disp-flex">
+					<p><span></span> ქულა: </p>
+					<p id="my-score" class="disp-flex">0</p>
+				</div>
+
+				<div class="pc-score disp-flex">
+					<p>კომპიუტერის ქულა: </p>
+					<p id="pc-score" class="disp-flex">0</p>
+				</div>
+			</div>
+
+			<!-- bottom section - winner name and restart button -->
+			<h2 id="winner"></h2>
+
+			<div class="restart-wrapper disp-flex">
+				<button class="restart-game-btn" onClick="window.location.reload();">ითამაშე ახლიდან <i class="fas fa-redo-alt"></i></button>
+			</div>
+		</div>
+	</main>
+
+	<!-- Script -->
+	<script src="js/main.js"></script>
+</body>
+</html>
